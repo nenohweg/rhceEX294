@@ -1,0 +1,15 @@
+[control]
+rhcesmnte1
+
+[webservers]
+rhcesmnte2
+rhcesmnte3
+
+[dbservers]
+rhcesmnte4
+rhcesmnte5
+
+[prod:children]
+webservers
+dbservers
+

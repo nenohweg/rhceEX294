@@ -1,0 +1,21 @@
+---
+ - name: repose setup for all yuppie
+   hosts: all
+   become: true
+
+   tasks: 
+     - name: AppStream
+       ansible.builtin.yum_repository:
+         baseurl: http://rhcesmnte1/disc/AppStream
+         name: appstream
+         gpgcheck: false
+         enabled: true
+         description: APP STREAM
+
+     - name: BaseOS
+       ansible.builtin.yum_repository:
+         baseurl: http://rhcesmnte1/disc/BaseOS
+         name: BaseOS
+         gpgcheck: false
+         enabled: true
+         description: BaseOS

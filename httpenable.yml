@@ -1,0 +1,12 @@
+---
+- name: enable port 88 http traffic
+  hosts: webservers
+  become: true
+
+  tasks:
+    - name: Enable HTTP Traffic via port 88 
+      ansible.posix.firewalld:
+        port: 88/tcp
+        permanent: true
+        immediate: true
+        state: enabled
