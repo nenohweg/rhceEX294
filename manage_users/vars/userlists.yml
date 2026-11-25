@@ -1,0 +1,14 @@
+---
+  group_list:
+    - name: devops
+      gid:  4500
+    - name: dba
+      gid:  4800
+
+  name_list:
+    - name: givemore
+      uid: 5600
+      group: dba
+    - name: nathan
+      uid:  5500
+      group: devops 

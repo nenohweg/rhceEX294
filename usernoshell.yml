@@ -1,0 +1,12 @@
+---
+ - name: creating a user john with no login shell
+   hosts: all
+   become: true
+
+   tasks:
+     - name: create user John
+       ansible.builtin.user:
+         name: johndba
+         uid: 30007
+         shell: /sbin/nologin
+         state: present
